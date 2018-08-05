@@ -5,6 +5,7 @@ This is a BASH script developed for CentOS 7 to minimize the time spent on compi
 2. Compiles the downloaded packages and installs them
 3. Logs are stored under /tmp/_sources/[package_name]/log. For example, you can find logs while compiling apr under /tmp/_sources/apr-1.6.3/log
 4. Loads the SSL (optional) and HTTP2 module by modifying the Apache configuration file and optionally adds a VirtualHost entry with SSL.
+5. Creates an "httpd" service which can be used with "service httpd start/stop" 
 # License
 This work is available under the GNU GPLv3 license.
 # Support

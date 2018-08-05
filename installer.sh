@@ -190,6 +190,8 @@ sudo groupadd www
 sudo useradd httpd -g www --no-create-home --shell /sbin/nologin
 echo "User httpd" >> /usr/local/apache2/conf/httpd.conf
 echo "Group www" >> /usr/local/apache2/conf/httpd.conf
+mkdir /var/www
+mkdir /var/www/html
 sed -i -e 's/\/usr\/local\/apache2\/htdocs/\/var\/www\/html/g' /usr/local/apache2/conf/httpd.conf
 
 echo "LoadModule http2_module modules/mod_http2.so" >> /usr/local/apache2/conf/httpd.conf

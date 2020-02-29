@@ -115,17 +115,17 @@ make install >> log || die "nghttp2 installation failed."
 cd /tmp/_sources
 echo "- Working directory is now /tmp/_sources"
 echo "3. Downloading APR 1.6.3..."
-wget http://www-us.apache.org/dist//apr/apr-1.6.3.tar.gz
-echo "3.1 Extracting APR 1.6.3..."
-tar xf apr-1.6.3.tar.gz
-cd apr-1.6.3
-echo "- Working directory is now /tmp/_sources/apr-1.6.3"
-echo "3.2 Preparing APR 1.6.3 for compilation..."
-./configure >> /log | die "APR 1.6.3 configuration failed."
-echo "3.3 Compiling APR 1.6.3..."
-make >> log || die "APR 1.6.3 compilation failed."
-echo "3.4 Installing APR 1.6.3..."
-make install >> log || die "APR 1.6.3 installation failed."
+wget http://it.apache.contactlab.it//apr/apr-1.7.0.tar.gz
+echo "3.1 Extracting APR 1.7.0..."
+tar xf apr-1.7.0.tar.gz
+cd apr-1.7.0
+echo "- Working directory is now /tmp/_sources/apr-1.7.0"
+echo "3.2 Preparing APR 1.7.0 for compilation..."
+./configure >> /log | die "APR 1.7.0 configuration failed."
+echo "3.3 Compiling APR 1.7.0..."
+make >> log || die "APR 1.7.0 compilation failed."
+echo "3.4 Installing APR 1.7.0..."
+make install >> log || die "APR 1.7.0 installation failed."
 cd /tmp/_sources
 echo "- Working directory is now /tmp/_sources"
 echo "4. Downloading apr-util 1.6.1..."

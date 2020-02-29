@@ -164,14 +164,14 @@ fi
 cd /tmp/_sources
 echo "- Working directory is now /tmp/_sources"
 
-echo "Downloading Apache 2.4.34.."
-wget https://www.apache.org/dist/httpd/httpd-2.4.34.tar.gz
-echo "Extracting Apache 2.4.34..."
-tar xf httpd-2.4.34.tar.gz
-cd httpd-2.4.34
-echo "- Working directory is now /tmp/_sources/httpd-2.4.34"
+echo "Downloading Apache 2.4.41.."
+wget http://mirror.nohup.it/apache//httpd/httpd-2.4.41.tar.bz2
+echo "Extracting Apache 2.4.41..."
+tar xf httpd-2.4.41.tar.gz
+cd httpd-2.4.41
+echo "- Working directory is now /tmp/_sources/httpd-2.4.41"
 echo "Copying APR into srclib/apr"
-cp -r ../apr-1.6.3 srclib/apr
+cp -r ../apr-1.7.0 srclib/apr
 echo "Copying apr-util into srclib/apr-util"
 cp -r ../apr-util-1.6.1 srclib/apr-util
 if [[ $_brotli ]]
@@ -180,9 +180,9 @@ then
 else
 ./configure --with-ssl=/usr/local/ssl --with-pcre=/usr/bin/pcre-config --enable-unique-id --enable-ssl --enable-so --with-included-apr --enable-http2 >> log || die "Apache configuration failed."
 fi
-echo "Compiling Apache 2.4.34.."
+echo "Compiling Apache 2.4.41.."
 make >> log || die "Apache compilation failed."
-echo "Installing Apache 2.4.34.."
+echo "Installing Apache 2.4.41.."
 make install >> log || die "Apache installation failed."
 
 echo "Finalizing.."
@@ -251,4 +251,4 @@ EOF
 systemctl daemon-reload
 systemctl enable httpd
 
-echo "Congratulations! If all went well, you should have your new Apache 2.4.34 installed inside /usr/local/apache2. Please run 'service httpd start' to start the Apache HTTP server."
+echo "Congratulations! If all went well, you should have your new Apache 2.4.41 installed inside /usr/local/apache2. Please run 'service httpd start' to start the Apache HTTP server."

@@ -114,7 +114,7 @@ echo "2.4 Installing nghttp2 1.32.0..."
 make install >> log || die "nghttp2 installation failed."
 cd /tmp/_sources
 echo "- Working directory is now /tmp/_sources"
-echo "3. Downloading APR 1.6.3..."
+echo "3. Downloading APR 1.7.0..."
 wget http://it.apache.contactlab.it//apr/apr-1.7.0.tar.gz
 echo "3.1 Extracting APR 1.7.0..."
 tar xf apr-1.7.0.tar.gz

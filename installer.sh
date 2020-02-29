@@ -54,7 +54,7 @@ then
 fi
 echo "Preparing to install packages.. this step might take a while depending on your internet speed."
 yum -y install epel-release
-yum -y install wget perl zlib-devel gcc gcc-c++ pcre-devel libxml2-devel openssl-devel expat-devel cmake git automake autoconf libtool python libcurl curl jansson jansson-devel libcurl-devel
+yum -y install wget perl zlib-devel gcc gcc-c++ pcre-devel libxml2-devel openssl-devel expat-devel cmake git automake autoconf libtool python libcurl curl jansson jansson-devel libcurl-devel python-devel
 echo 
 echo 
 function die() {
